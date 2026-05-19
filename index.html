@@ -19,9 +19,9 @@
       --border: #1f2630;
       --danger: #ff4f4f;
       --webrtc: #44d97e;
-      --vqa: #38d9ff;
+      --sqa: #38d9ff;
       --rnn: #a56bff;
-      --rnn_vqa: #ffbf4d;
+      --rnn_sqa: #ffbf4d;
       --adaptive_hybrid_rnn: #ff8f3f;
       --radius: 16px;
       --radius-sm: 10px;
@@ -226,9 +226,9 @@
     }
 
     .pill[data-key="webrtc"] { border-color: color-mix(in srgb, var(--webrtc) 45%, var(--border)); }
-    .pill[data-key="vqa"] { border-color: color-mix(in srgb, var(--vqa) 45%, var(--border)); }
+    .pill[data-key="sqa"] { border-color: color-mix(in srgb, var(--sqa) 45%, var(--border)); }
     .pill[data-key="rnn"] { border-color: color-mix(in srgb, var(--rnn) 45%, var(--border)); }
-    .pill[data-key="rnn_vqa"] { border-color: color-mix(in srgb, var(--rnn_vqa) 50%, var(--border)); }
+    .pill[data-key="rnn_sqa"] { border-color: color-mix(in srgb, var(--rnn_sqa) 50%, var(--border)); }
     .pill[data-key="adaptive_hybrid_rnn"] { border-color: color-mix(in srgb, var(--adaptive_hybrid_rnn) 45%, var(--border)); }
 
     .pill-reset {
@@ -311,8 +311,8 @@
     }
 
     .sample-item.active .active-dot {
-      background: var(--vqa);
-      border-color: color-mix(in srgb, var(--vqa) 65%, #ffffff 12%);
+      background: var(--sqa);
+      border-color: color-mix(in srgb, var(--sqa) 65%, #ffffff 12%);
       box-shadow: 0 0 0 5px rgba(56, 217, 255, 0.1);
     }
 
@@ -624,10 +624,10 @@
   <script>
     const algorithms = [
       { key: "webrtc", label: "WebRTC", color: "var(--webrtc)", tag: "PROCESSED" },
-      { key: "vqa", label: "VQA", color: "var(--vqa)", tag: "PROCESSED" },
-      { key: "rnn", label: "RNN", color: "var(--rnn)", tag: "PROCESSED" },
-      { key: "rnn_vqa", label: "RNN + VQA", color: "var(--rnn_vqa)", tag: "PROCESSED" },
-      { key: "adaptive_hybrid_rnn", label: "Adaptive Hybrid RNN", color: "var(--adaptive_hybrid_rnn)", tag: "PROCESSED" }
+      { key: "sqa", label: "sqa", color: "var(--sqa)", tag: "PROCESSED" },
+      { key: "rnn", label: "RNN_GRU", color: "var(--rnn)", tag: "PROCESSED" },
+      { key: "rnn_sqa", label: "RNN + sqa", color: "var(--rnn_sqa)", tag: "PROCESSED" },
+      { key: "adaptive_hybrid_rnn", label: "Adaptive RNN + sqa", color: "var(--adaptive_hybrid_rnn)", tag: "PROCESSED" }
     ];
 
     const sampleCatalog = [
@@ -917,3 +917,5 @@
   </script>
 </body>
 </html>
+
+
